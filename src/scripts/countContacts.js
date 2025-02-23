@@ -1,3 +1,11 @@
-export const countContacts = async () => {};
+import { readContacts } from "../utils/readContacts.js";
 
-console.log(await countContacts());
+
+
+
+export const countContacts = async () => {
+    const contacts = await readContacts();
+    console.log(`Загальна кількість контактів: ${contacts.length}`);
+ };
+
+countContacts();
